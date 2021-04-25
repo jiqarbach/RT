@@ -1,0 +1,18 @@
+camera:
+ lokfrm: 0:0:30
+ lokat: 0:0:0
+ fov: 60
+lights:
+ intensity: 100
+ color: 255:255:255
+ pos: 0:0:100
+sphere:
+ center: 0:0:0
+ trs: 0:0:0
+ radius: 15
+ color: 0:0:255
+sphere:
+ center: 0:0:40
+ trs: 0:0:0
+ radius: 15
+ color: 255:0:0

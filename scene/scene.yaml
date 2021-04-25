@@ -1,0 +1,381 @@
+camera:
+ lokfrm: 0:0:40
+ lokat: 0:0:1
+ fov: 60
+lights:
+ pos: 0:0:50
+ color: 255:255:255
+ intensity: 10
+lights:
+ pos: 0:7:30
+ color: 255:255:255
+ intensity: 20
+lights:
+ pos: 0:-7:10
+ color: 255:255:255
+ intensity: 30
+lights:
+ pos: 0:7:-10
+ color: 255:255:255
+ intensity: 30
+lights:
+ pos: 0:7:-30
+ color: 255:255:255
+ intensity: 20
+lights:
+ pos: 0:7:-50
+ color: 255:255:255
+ intensity: 10
+lights:
+ pos: 0:7:-70
+ color: 255:255:255
+ intensity: 50
+cylinder:
+ ref: 0
+ center: 0:-8:-30
+ trs: 0:0:0
+ axis: 1:0:0
+ radius: 1
+ color: 255:255:255
+ rot: 0:0:0
+cylinder:
+ ref: 0
+ center: 0:-4:-30
+ trs: 0:0:0
+ axis: 1:0:0
+ radius: 1
+ color: 255:255:255
+ rot: 0:0:0
+cylinder:
+ ref: 0
+ center: 0:0:-30
+ trs: 0:0:0
+ axis: 1:0:0
+ radius: 1
+ color: 255:255:255
+ rot: 0:0:0
+cylinder:
+ ref: 0
+ center: 0:4:-30
+ trs: 0:0:0
+ axis: 1:0:0
+ radius: 1
+ color: 255:255:255
+ rot: 0:0:0
+cylinder:
+ ref: 0
+ center: 0:8:-30
+ trs: 0:0:0
+ axis: 1:0:0
+ radius: 1
+ color: 255:255:255
+ rot: 0:0:0
+cylinder:
+ ref: 0
+ center: 12:0:-30
+ trs: 0:0:0
+ axis: 0:1:0
+ radius: 1
+ color: 255:255:255
+ rot: 0:0:0
+cylinder:
+ ref: 0
+ center: 8:0:-30
+ trs: 0:0:0
+ axis: 0:1:0
+ radius: 1
+ color: 255:255:255
+ rot: 0:0:0
+cylinder:
+ ref: 0
+ center: 4:0:-30
+ trs: 0:0:0
+ axis: 0:1:0
+ radius: 1
+ color: 255:255:255
+ rot: 0:0:0
+cylinder:
+ ref: 0
+ center: 0:0:-30
+ trs: 0:0:0
+ axis: 0:1:0
+ radius: 1
+ color: 255:255:255
+ rot: 0:0:0
+cylinder:
+ ref: 0
+ center: -4:0:-30
+ trs: 0:0:0
+ axis: 0:1:0
+ radius: 1
+ color: 255:255:255
+ rot: 0:0:0
+cylinder:
+ ref: 0
+ center: -8:0:-30
+ trs: 0:0:0
+ axis: 0:1:0
+ radius: 1
+ color: 255:255:255
+ rot: 0:0:0
+cylinder:
+ ref: 0
+ center: -12:0:-30
+ trs: 0:0:0
+ axis: 0:1:0
+ radius: 1
+ color: 255:255:255
+ rot: 0:0:0
+sphere:
+ ref: 0
+ center: 5:6:-9
+ trs: 0:0:0
+ radius: 2
+ color: 255:0:0
+sphere:
+ ref: 0
+ center: 5:-6:-9
+ trs: 0:0:0
+ radius: 2
+ color: 255:0:0
+sphere:
+ ref: 0
+ center: 0:0:-4
+ trs: 0:0:0
+ radius: 4
+ color: 255:0:0
+sphere:
+ ref: 0
+ center: -5:-6:-9
+ trs: 0:0:0
+ radius: 2
+ color: 255:0:0
+sphere:
+ ref: 0
+ center: -5:6:-9
+ trs: 0:0:0
+ radius: 2
+ color: 255:0:0
+sphere:
+ ref: 0
+ center: 12:-12:0
+ trs: 0:0:0
+ radius: 4
+ color: 223:102:102
+cylinder:
+ ref: 0
+ center: 12:12:0
+ trs: 0:0:0
+ axis: 0:1:0
+ radius: 2
+ color: 255:255:255
+ rot: 0:0:0
+sphere:
+ ref: 0
+ center: 12:12:0
+ trs: 0:0:0
+ radius: 4
+ color: 223:102:102
+sphere:
+ ref: 0
+ center: 12:-12:20
+ trs: 0:0:0
+ radius: 4
+ color: 223:102:102
+cylinder:
+ ref: 0
+ center: 12:12:20
+ trs: 0:0:0
+ axis: 0:1:0
+ radius: 2
+ color: 255:255:255
+ rot: 0:0:0
+sphere:
+ ref: 0
+ center: 12:12:20
+ trs: 0:0:0
+ radius: 4
+ color: 223:102:102
+sphere:
+ ref: 0
+ center: -12:-12:20
+ trs: 0:0:0
+ radius: 4
+ color: 223:102:102
+cylinder:
+ ref: 0
+ center: -12:12:20
+ trs: 0:0:0
+ axis: 0:1:0
+ radius: 2
+ color: 255:255:255
+ rot: 0:0:0
+sphere:
+ ref: 0
+ center: -12:12:20
+ trs: 0:0:0
+ radius: 4
+ color: 223:102:102
+sphere:
+ ref: 0
+ center: -12:-12:0
+ trs: 0:0:0
+ radius: 4
+ color: 223:102:102
+cylinder:
+ ref: 0
+ center: -12:12:0
+ trs: 0:0:0
+ axis: 0:1:0
+ radius: 2
+ color: 255:255:255
+ rot: 0:0:0
+sphere:
+ ref: 0
+ center: -12:12:0
+ trs: 0:0:0
+ radius: 4
+ color: 223:102:102
+sphere:
+ ref: 0
+ center: -12:-12:-20
+ trs: 0:0:0
+ radius: 4
+ color: 223:102:102
+cylinder:
+ ref: 0
+ center: -12:12:-20
+ trs: 0:0:0
+ axis: 0:1:0
+ radius: 2
+ color: 255:255:255
+ rot: 0:0:0
+sphere:
+ ref: 0
+ center: -12:12:-20
+ trs: 0:0:0
+ radius: 4
+ color: 223:102:102
+sphere:
+ ref: 0
+ center: 12:-12:-20
+ trs: 0:0:0
+ radius: 4
+ color: 223:102:102
+cylinder:
+ ref: 0
+ center: 12:12:-20
+ trs: 0:0:0
+ axis: 0:1:0
+ radius: 2
+ color: 255:255:255
+ rot: 0:0:0
+sphere:
+ ref: 0
+ center: 12:12:-20
+ trs: 0:0:0
+ radius: 4
+ color: 223:102:102
+sphere:
+ ref: 0
+ center: -12:-12:-40
+ trs: 0:0:0
+ radius: 4
+ color: 223:102:102
+cylinder:
+ ref: 0
+ center: -12:12:-40
+ trs: 0:0:0
+ axis: 0:1:0
+ radius: 2
+ color: 255:255:255
+ rot: 0:0:0
+sphere:
+ ref: 0
+ center: -12:12:-40
+ trs: 0:0:0
+ radius: 4
+ color: 223:102:102
+sphere:
+ ref: 0
+ center: 12:-12:-40
+ trs: 0:0:0
+ radius: 4
+ color: 223:102:102
+cylinder:
+ ref: 0
+ center: 12:12:-40
+ trs: 0:0:0
+ axis: 0:1:0
+ radius: 2
+ color: 255:255:255
+ rot: 0:0:0
+sphere:
+ ref: 0
+ center: 12:12:-40
+ trs: 0:0:0
+ radius: 4
+ color: 223:102:102
+plane:
+ ref: 1
+ center: 17:0:0
+ trs: 0:0:0
+ axis: 1:0:0
+ rot: 0:0:0
+ color: 135:252:85
+plane:
+ ref: 1
+ center: -17:0:0
+ trs: 0:0:0
+ axis: 1:0:0
+ rot: 0:0:0
+ color: 135:252:85
+plane:
+ ref: 1
+ center: 0:0:50
+ trs: 0:0:0
+ axis: 0:0:1
+ rot: 0:0:0
+ color: 85:180:252
+plane:
+ ref: 1
+ center: 0:-10:0
+ trs: 0:0:0
+ axis: 0:1:0
+ rot: 0:0:0
+ color: 85:180:252
+plane:
+ ref: 1
+ center: 0:10:0
+ trs: 0:0:0
+ axis: 0:1:0
+ rot: 0:0:0
+ color: 255:255:255
+plane:
+ ref: 1
+ center: 0:25:0
+ trs: 0:0:0
+ axis: 1:1:0
+ rot: 0:0:0
+ color: 255:255:255
+plane:
+ ref: 1
+ center: 0:-25:0
+ trs: 0:0:0
+ axis: 1:1:0
+ rot: 0:0:0
+ color: 255:255:255
+plane:
+ ref: 1
+ center: 0:25:0
+ trs: 0:0:0
+ axis: -1:1:0
+ rot: 0:0:0
+ color: 255:255:255
+plane:
+ ref: 1
+ center: 0:-25:0
+ trs: 0:0:0
+ axis: -1:1:0
+ rot: 0:0:0
+ color: 255:255:255

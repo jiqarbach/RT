@@ -1,0 +1,24 @@
+camera:
+ lokfrm: -10:0:0
+ lokat: 0:0:10
+ fov: 60
+ ambiante:
+cylinder:
+ refl:
+ refr:
+ texture:
+ postexsture:
+ slice:
+ posslice:
+ obj: negative || no
+ center: 0:0:10
+ trs: 0:0:0
+ axis: 0:1:0
+ radius: 2
+ color: 255:0:255
+ rot: 0:0:0
+lights:
+ pos: -10:0:0
+ color: 255:255:255
+ direct:
+ intensity: 100

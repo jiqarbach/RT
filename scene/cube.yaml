@@ -1,0 +1,21 @@
+lights:
+ intensity: 100
+ color: 255:255:255
+ pos: 0:0:100
+ direct_light: 0
+ direction: 0:0:0
+ angle: 20
+camera:
+ lokfrm: 0:0:100
+ lokat: 0:0:0
+ fov: 60
+ ambiante: 0.1
+cube:
+ center: 0:0:0
+ trs: 0:0:0
+ rot: 0:0:0
+ color: 255:255:0
+ size: 0
+ refl: 0
+ refr: 0
+ perrfr: 0

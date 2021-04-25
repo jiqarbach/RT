@@ -1,0 +1,127 @@
+lights:
+ intensity: 100
+ color: 255:255:255
+ pos: -100:0:170
+camera:
+ lokfrm: 0:0:170
+ lokat: 0:0:0
+ fov: 60
+camera:
+ lokfrm: 0:0:170
+ lokat: 0:0:0
+ fov: 120
+camera:
+ lokfrm: 100:0:170
+ lokat: 0:0:0
+ fov: 60
+camera:
+ lokfrm: -100:0:170
+ lokat: 0:0:0
+ fov: -60
+sphere:
+ ref: 0
+ center: -30:-30:70
+ trs: 0:0:0
+ color: 99:100:165
+ radius: 10
+sphere:
+ ref: 0
+ center: 30:-30:70
+ trs: 0:0:0
+ radius: 10
+ color: 99:100:165
+sphere:
+ ref: 0
+ center: -30:30:70
+ trs: 0:0:0
+ radius: 10
+ color: 99:100:165
+sphere:
+ ref: 0
+ center: 30:30:70
+ trs: 0:0:0
+ radius: 10
+ color: 99:100:165
+sphere:
+ ref: 0
+ center: -30:-30:0
+ trs: 0:0:0
+ radius: 10
+ color: 99:100:165
+sphere:
+ ref: 0
+ center: 30:-30:0
+ trs: 0:0:0
+ radius: 10
+ color: 99:100:165
+sphere:
+ ref: 0
+ center: -30:30:0
+ trs: 0:0:0
+ radius: 10
+ color: 99:100:165
+sphere:
+ ref: 0
+ center: 30:30:0
+ trs: 0:0:0
+ radius: 10
+ color: 99:100:165
+sphere:
+ ref: 0
+ center: 0:-20:70
+ trs: 0:0:0
+ color: 255:0:0
+ radius: 6
+cylinder:
+ ref: 1
+ rot: 0:0:0
+ center: -30:0:0
+ trs: 0:0:0
+ axis: 0:1:0
+ color: 99:100:165
+ radius: 6
+cylinder:
+ ref: 1
+ rot: 0:0:0
+ center: 30:0:0
+ trs: 0:0:0
+ color: 99:100:165
+ axis: 0:1:0
+ radius: 6
+cylinder:
+ ref: 1
+ rot: 0:0:0
+ center: -30:0:70
+ trs: 0:0:0
+ axis: 0:1:0
+ color: 99:100:165
+ radius: 6
+cylinder:
+ ref: 1
+ rot: 0:0:0
+ center: 30:0:70
+ trs: 0:0:0
+ axis: 0:1:0
+ color: 99:100:165
+ radius: 6
+plane:
+ ref: 1
+ rot: 0:0:0
+ center: 0:0:-140
+ trs: 0:0:0
+ axis: 0:0:1
+ color: 0:0:110
+plane:
+ ref: 1
+ rot: 0:0:0
+ center: 0:-30:0
+ trs: 0:0:0
+ axis: 0:1:0
+ color: 77:77:77
+plane:
+ ref: 1
+ rot: 0:0:0
+ center: 0:30:0
+ trs: 0:0:0
+ axis: 0:1:0
+ color: 255:77:77

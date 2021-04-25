@@ -1,0 +1,28 @@
+lights:
+ intensity: 100
+ color: 255:255:255
+ pos: 0:0:100
+ direct_light: 0
+ direction: 0:0:0
+ angle: 20
+camera:
+ lokfrm: 0:0:100
+ lokat: 0:0:0
+ fov: 60
+ ambiante: 0.1
+plane:
+ size: 0
+ texture: ./texture/wall2.jpg
+ pos_texture: 0:0:0
+ slice: 0:1:0
+ pos_slice: 0:0:0
+ rot: 0:0:0
+ center: 2:0:0
+ trs: 0:0:0
+ color: 255:0:0
+ axis: 1:0:0
+ refl: 0
+ refr: 0
+ matter: 0
+ per_refr: 0
+ neg_obj: 0

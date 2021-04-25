@@ -1,0 +1,112 @@
+camera:
+ lokfrm: -10:0:0
+ lokat: 0:0:10
+ fov: 60
+ ambiante:
+
+
+lights:
+ pos: -10:0:0
+ color: 255:255:255
+ direction: x:y:z
+ direct: 1 | 0
+ angle: 60
+ intensity: 100
+
+
+cone:
+ size://
+ texture://
+ postext://
+ slice://
+ poslice://
+ center://
+ axis://
+ rot://
+ trs://
+ angle://
+ color://
+ refl://
+ refr://
+ matter://
+ perrfr://
+ neg_objobj://
+
+
+cylinder:
+ size://
+ texture://
+ postext://
+ slice://
+ poslice://
+ center://
+ axis://
+ rot://
+ trs://
+ radius://
+ color:/
+ refl://
+ refr://
+ matter://
+ perrfr://
+ neg_obj://
+
+
+parabloid:
+ center://
+ axis://
+ rot://
+ trs://
+ angle://
+ color://
+
+
+sphere:
+ texture://
+ postext://
+ slice://
+ poslice://
+ center://
+ trs://
+ radius:/
+ color://
+ refl://
+ refr://
+ matter://
+ perrfr://
+ neg_obj://
+
+
+plane:
+ size://
+ texture://
+ postext://
+ slice://
+ poslice://
+ center://
+ axis://
+ rot://
+ trs://
+ color://
+ refl://
+ refr://
+ matter://
+ perrfr://
+ neg_obj://
+
+ plane:
+ size: 0
+ texture: ./wall.jpg
+ postext: 0:0:0
+ slice: 0:0:0
+ poslice: 0:0:0
+ center: 10:0:0
+ axis: 1:0:0
+ rot: 0:0:0
+ trs: 0:0:0
+ color: 0:0:0
+ refl: 0
+ refr: 0
+ matter: 0
+ perrfr: 0
+ neg_obj: 0
