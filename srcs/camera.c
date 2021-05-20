@@ -6,7 +6,7 @@
 /*   By: yataji <yataji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 01:02:43 by yataji            #+#    #+#             */
-/*   Updated: 2021/04/24 10:40:22 by yataji           ###   ########.fr       */
+/*   Updated: 2021/04/26 16:23:09 by yataji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,6 @@ t_ray	initray(t_cam *cam, int x, int y)
 	ray.dir = plus(multi(cam->u, px), multi(cam->v, py));
 	ray.dir = normalize(plus(ray.dir, cam->w));
 	ray.n1 = 1;
-	ray.maxrf = 0;
 	return (ray);
 }
 

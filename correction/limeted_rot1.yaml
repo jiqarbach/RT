@@ -1,0 +1,45 @@
+lights:
+ intensity: 100
+ color: 255:255:255
+ pos: -80:0:100
+ direct_light: 0
+ direction: 0:0:0
+ angle: 20
+camera:
+ lokfrm: 0:0:100
+ lokat: 0:0:0
+ fov: 60
+ ambiante: 0.1
+cylinder:
+ size: 60
+ postext: 0:0:0
+ slice: 0:-1:1
+ poslice: 0:-20:0
+ matter: 0
+ perrfr: 0
+ neg_obj: 0
+ texture: .
+ refl: 0
+ refr: 0
+ center: -30:0:0
+ trs: 0:0:0
+ axis: 0:1:0
+ radius: 20
+ color: 255:255:255
+ rot: 20:20:20
+plane:
+ size: 0
+ texture: .
+ postext: 0:0:0
+ slice: 0:0:0
+ poslice: 0:0:0
+ refl: 0
+ refr: 0
+ matter: 0
+ perrfr: 0
+ neg_obj: 0
+ center: 0:0:-50
+ trs: 0:0:0
+ axis: 0:0:1
+ rot: 0:0:0
+ color: 100:0:85

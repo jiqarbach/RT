@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: yataji <marvin@42.fr>                      +#+  +:+       +#+         #
+#    By: nabouzah <nabouzah@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/07 18:24:42 by yataji            #+#    #+#              #
-#    Updated: 2019/11/28 10:59:18 by yataji           ###   ########.fr        #
+#    Updated: 2021/04/26 04:45:39 by nabouzah         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -100,7 +100,7 @@ $(OBJ_DIR):
 	@-mkdir $(OBJ_DIR)
 
 $(OB): $(OBJ_DIR)/%.o : ./%.c $(HEADER) | $(OBJ_DIR)
-	@gcc -c  $(INCLUDE) $< -o $@ 
+	@gcc -c  $(INCLUDE) $< -o $@
 
 clean :
 	@rm -rf $(OBJ_DIR)

@@ -6,7 +6,7 @@
 #    By: yataji <yataji@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/20 11:57:48 by yataji            #+#    #+#              #
-#    Updated: 2021/04/24 13:28:55 by yataji           ###   ########.fr        #
+#    Updated: 2021/04/25 14:38:09 by yataji           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,6 @@ SRC  =	main.c\
 		obj_plane.c\
 		obj_sphere.c\
 		obj_paraploid.c\
-		obj_cube.c\
 		parse_check.c\
 		stock.c\
 		init_parce.c\
@@ -50,7 +49,6 @@ SRC  =	main.c\
 		menu.c\
 		tools_parse.c\
 		parse_stock.c\
-		cube.c\
 		refl_refr.c\
 
 HEADER = 	includes/rt.h

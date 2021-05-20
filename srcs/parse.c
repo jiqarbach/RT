@@ -6,7 +6,7 @@
 /*   By: yataji <yataji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 14:48:30 by jiqarbac          #+#    #+#             */
-/*   Updated: 2021/04/23 17:30:54 by yataji           ###   ########.fr       */
+/*   Updated: 2021/04/25 14:36:41 by yataji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,6 @@ int	parse_objs2(t_rt *rt, char *str)
 	else if (ft_strcmp(str, "paraploid:") == 0)
 	{
 		if (ft_paraploid(rt, str) == -1)
-			return (-1);
-	}
-	else if (ft_strcmp(str, "cube:") == 0)
-	{
-		if (ft_cube(rt, str) == -1)
 			return (-1);
 	}
 	else

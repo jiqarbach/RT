@@ -1,0 +1,56 @@
+lights:
+ intensity: 25
+ color: 255:255:255
+ pos: 0:0:100
+ direct_light: 1
+ direction: 0:0:0
+ angle: 60
+camera:
+ lokfrm: 0:0:100
+ lokat: 0:0:0
+ fov: 60
+ ambiante: 0.1
+sphere:
+ slice: 0:0:0
+ texture: .
+ postext: 0:0:0
+ poslice: 0:0:0
+ center: -20:0:40
+ trs: 0:0:0
+ radius: 10
+ color: 255:255:255
+ refl: 1
+ refr: 1
+ matter: 1
+ perrfr: 0.9
+ neg_obj: 0
+sphere:
+ slice: 0:0:0
+ texture: .
+ postext: 0:0:0
+ poslice: 0:0:0
+ center: 20:0:40
+ trs: 0:0:0
+ radius: 10
+ color: 0:0:255
+ refl: 1
+ refr: 0
+ matter: 0
+ perrfr: 0.9
+ neg_obj: 0
+plane:
+ size: 0
+ texture: ./texture/pic1.jpeg
+ postext: 0:0:0
+ slice: 0:0:0
+ poslice: 0:0:0
+ rot: 0:0:0
+ center: 0:0:0
+ trs: 0:0:0
+ color: 255:0:255
+ axis: 0:0:1
+ refl: 0
+ refr: 0
+ matter: 0
+ perrfr: 0
+ neg_obj: 0

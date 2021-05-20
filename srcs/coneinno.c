@@ -12,6 +12,16 @@
 
 #include "rt.h"
 
+void	negative_objc(t_obj *obj)
+{
+	if (obj->neg_obj == 1)
+	{
+		obj->color = (t_vect){0, 0, 0};
+		obj->normal = (t_vect){0, 0, 0};
+		obj->texture = ft_strdup(".");
+	}
+}
+
 double	coneintr(t_obj **cone, t_ray ray)
 {
 	t_vect	v;
@@ -34,6 +44,7 @@ double	coneintr(t_obj **cone, t_ray ray)
 	sol = check_min_max(calc);
 	(*cone)->normal = normalize(normcone(&ray, *cone, sol.tmin));
 	(*cone)->hit = plus(ray.org, multi(ray.dir, sol.tmin));
+	negative_objc(*cone);
 	if ((*cone)->size != 0)
 		sol.tmin = limeted_cone(*cone, ray, sol);
 	return (sol.tmin);

@@ -6,7 +6,7 @@
 /*   By: yataji <yataji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 12:18:10 by yataji            #+#    #+#             */
-/*   Updated: 2021/04/24 15:31:09 by yataji           ###   ########.fr       */
+/*   Updated: 2021/04/26 16:34:10 by yataji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,18 +35,16 @@ t_color	color(t_rt *rt, t_obj *close, t_lights *lights)
 	rt->tmpl = lights;
 	while (rt->tmpl)
 	{
-		shad = shadow(rt, rt->tmpl, close);
-		if (shad)
-			c = diffuspclr(rt->ray, close, rt->tmpl);
-		// if (shad == -1)
-		// 	c = multi(close->color, close->per_refr);
+		c = diffuspclr(rt->ray, close, rt->tmpl);
+		if (lights->intensity > 0)
+			shad = shadow(rt, rt->tmpl, close);
+		if (!shad)
+			c = multi(close->color, 0.1);
 		if (shad == -1)
-			c = multi(close->color, 0.9);
-		if (shad == 0)
-			c = (t_color){0, 0, 0};
-		if (close->refl)
+			c = multi(close->color, 0.8);
+		if (shad && close->refl)
 			c = add_color(reflection(rt, close, rt->tmpl, rt->ray), c);
-		if (close->refr)
+		if (shad && close->refr)
 			c = add_color(refraction(rt, close, rt->tmpl, rt->ray), c);
 		ret = add_color(ret, c);
 		rt->tmpl = rt->tmpl->next;
@@ -63,7 +61,7 @@ void	drawcolor(t_var v, t_rt rt, t_obj *tmpo)
 	col = (t_color){0, 0, 0};
 	while (tmpo)
 	{
-		v.t = intersect(&tmpo, rt.ray);
+		v.t = intersect(&tmpo, rt.ray) + 0.0001;
 		if ((v.t < v.near && v.t > 0) || (v.t > v.near && v.near < 0))
 		{
 			close = tmpo;
@@ -76,43 +74,54 @@ void	drawcolor(t_var v, t_rt rt, t_obj *tmpo)
 		rt.ray.hit = close->hit;
 		col = color(&rt, close, rt.lights);
 	}
-	if (SDL_SetRenderDrawColor(rt.rend, col.x, col.y, col.z, 255) != 0)
-		sdl_error("Get color failed");
-	if (SDL_RenderDrawPoint(rt.rend, v.y, v.x) != 0)
-		sdl_error("draw point failed");
-	rt.screen[v.y * MAXWIDTH + v.x] = col;
+	putimage(&rt, &col, &v);
 }
 
-int	inside_rect(t_rt *rt, SDL_Rect r)
+void	*raytracing(void *rtt)
 {
-	if (rt->event.i >= r.x && rt->event.i <= r.x + r.w
-		&& rt->event.j >= r.y && rt->event.j <= r.y + r.h)
-		return (1);
-	return (0);
+	t_var		v;
+	t_rt		rt;
+
+	rt = *((t_rt *)(rtt));
+	v.y = rt.start - 1;
+	v.near = -1.0;
+	while (++v.y < rt.end)
+	{
+		v.x = -1;
+		while (++v.x < MAXHEIGHT)
+		{
+			rt.ray = initray(rt.tmpc, v.y, v.x);
+			rt.tmpo = rt.obj;
+			v.near = -1;
+			drawcolor(v, rt, rt.tmpo);
+		}
+	}
+	filtres(&rt);
+	return (NULL);
 }
 
 void	draw(t_rt	rt)
 {
-	t_var		v;
+	int			i;
+	pthread_t	thread_id[4];
+	t_rt		data[4];
+	t_rt		*rtt;
 
-	v.y = -1;
-	v.near = -1.0;
+	rtt = &rt;
+	i = 0;
 	if (rt.menu == 0)
 		menu(&rt);
 	if (rt.menu == 1)
 	{
-		while (++v.y < MAXWIDTH)
+		while (i < 4)
 		{
-			v.x = -1;
-			while (++v.x < MAXHEIGHT)
-			{
-				rt.ray = initray(rt.tmpc, v.y, v.x);
-				rt.tmpo = rt.obj;
-				v.near = -1;
-				drawcolor(v, rt, rt.tmpo);
-			}
+			rtt->start = MAXWIDTH / 4 * i;
+			rtt->end = MAXHEIGHT / 4 * i + (MAXHEIGHT / 4);
+			ft_memcpy((void *)&data[i], (void *)rtt, sizeof(t_rt));
+			pthread_create(&thread_id[i], NULL, raytracing, &data[i]);
+			pthread_join(thread_id[i], NULL);
+			i++;
 		}
-		filtres(&rt);
 	}
 	loop(&rt);
 }

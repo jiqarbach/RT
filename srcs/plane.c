@@ -6,7 +6,7 @@
 /*   By: yataji <yataji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 18:36:08 by yataji            #+#    #+#             */
-/*   Updated: 2021/04/24 16:07:04 by yataji           ###   ########.fr       */
+/*   Updated: 2021/04/26 16:34:28 by yataji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,9 @@ double	planiter(t_obj **plan, t_ray ray)
 		return (-1);
 	(*plan)->hit = plus(ray.org, multi(ray.dir, t));
 	(*plan)->normal = normalize((*plan)->v);
+	if (dot((*plan)->normal, ray.dir) > 0)
+		(*plan)->normal = multi((*plan)->v, -1);
+	negative_objc(*plan);
 	t = plan_slice(*plan, t);
 	if ((*plan)->size != 0)
 		t = limeted_plan(*plan, ray, t);

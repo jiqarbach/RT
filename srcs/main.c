@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jiqarbac <jiqarbac@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yataji <yataji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 15:00:48 by yataji            #+#    #+#             */
-/*   Updated: 2021/04/23 16:08:12 by jiqarbac         ###   ########.fr       */
+/*   Updated: 2021/04/26 16:33:20 by yataji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,14 @@ void	usage(void)
 {
 	ft_putendl("usage: ./rtv1 scene/(chose a file .yaml)");
 	exit(1);
+}
+
+int	inside_rect(t_rt *rt, SDL_Rect r)
+{
+	if (rt->event.i >= r.x && rt->event.i <= r.x + r.w
+		&& rt->event.j >= r.y && rt->event.j <= r.y + r.h)
+		return (1);
+	return (0);
 }
 
 int	checknamefl(char *name)
@@ -34,6 +42,8 @@ t_rt	init_list(t_rt rt)
 	rt.lights = NULL;
 	rt.cam = NULL;
 	rt.menu = 0;
+	rt.maxrfl = 0;
+	rt.maxrfr = 0;
 	rt.screen = (t_vect *)malloc((MAXWIDTH * MAXHEIGHT) * sizeof(t_vect));
 	return (rt);
 }

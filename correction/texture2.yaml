@@ -1,0 +1,40 @@
+lights:
+ intensity: 100
+ color: 255:255:255
+ pos: 0:0:100
+ direct_light: 0
+ direction: 0:0:0
+ angle: 20
+camera:
+ lokfrm: 0:0:100
+ lokat: 0:0:0
+ fov: 60
+ ambiante: 0.1
+sphere:
+ slice: 0:0:0
+ texture: ./texture/blow.jpg
+ postext: 0:0:0
+ poslice: 0:0:0
+ refl: 0
+ refr: 0
+ matter: 0
+ perrfr: 0
+ neg_obj: 0
+ center: 20:0:0
+ trs: 0:0:0
+ radius: 15
+ color: 255:0:0
+sphere:
+ slice: 0:0:0
+ texture: ./texture/blow.jpg
+ postext: 500:0:0
+ poslice: 0:0:0
+ refl: 0
+ refr: 0
+ matter: 0
+ perrfr: 0
+ neg_obj: 0
+ center: -20:0:0
+ trs: 0:0:0
+ radius: 15
+ color: 255:0:0

@@ -6,11 +6,20 @@
 /*   By: yataji <yataji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/08 16:20:08 by jiqarbac          #+#    #+#             */
-/*   Updated: 2021/04/24 11:43:48 by yataji           ###   ########.fr       */
+/*   Updated: 2021/04/26 16:32:56 by yataji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rt.h"
+
+void	putimage(t_rt *rt, t_color *col, t_var *v)
+{
+	if (SDL_SetRenderDrawColor(rt->rend, col->x, col->y, col->z, 255) != 0)
+		sdl_error("Get color failed");
+	if (SDL_RenderDrawPoint(rt->rend, v->y, v->x) != 0)
+		sdl_error("draw point failed");
+	rt->screen[v->y * MAXWIDTH + v->x] = *col;
+}
 
 void	sdl_error(char *message)
 {

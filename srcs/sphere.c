@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sphere.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yataji <yataji@student.42.fr>              +#+  +:+       +#+        */
+/*   By: yoelguer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/01 18:27:45 by yataji            #+#    #+#             */
-/*   Updated: 2021/04/24 13:41:47 by yataji           ###   ########.fr       */
+/*   Created: 2021/04/27 09:52:19 by yoelguer          #+#    #+#             */
+/*   Updated: 2021/04/27 09:52:22 by yoelguer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,17 @@ double	limeted_sph(t_obj *sph, t_ray r, t_sol sol)
 		is = 0;
 	else
 		is = 1;
-	if (is == 1 && dot(moins(sph->pos_slice, r.hit), sly) <= 0.0)
+	if (is == 1 && dot(moins(sph->pos_slice, sph->hit), sly) <= 0.0)
 	{
-		r.hit = plus(r.org, multi(r.dir, sol.tmax));
-		sph->normal = multi(sph->normal, -1);
-		if (sol.tmax > 0 && dot(moins(sph->pos_slice, r.hit), sly) > 0.0)
+		sph->hit = plus(r.org, multi(r.dir, sol.tmax));
+		if (sol.tmax > 0 && dot(moins(sph->pos_slice, sph->hit), sly) > 0.0)
+		{
+			sph->normal = normalize(multi(sph->normal, -1));
 			return (sol.tmax);
+		}
+		return (-1);
 	}
-	return (-1);
+	return (sol.tmin);
 }
 
 double	sphrintr(t_obj **sphere, t_ray ray)
@@ -46,9 +49,8 @@ double	sphrintr(t_obj **sphere, t_ray ray)
 	sol = check_min_max(calc);
 	(*sphere)->hit = plus(ray.org, multi(ray.dir, sol.tmin));
 	(*sphere)->normal = normalize(moins((*sphere)->hit, (*sphere)->center));
-	if ((*sphere)->slice.x != 0 || (*sphere)->slice.y != 0
-		|| (*sphere)->slice.z != 0)
-		return (limeted_sph(*sphere, ray, sol));
+	negative_objc(*sphere);
+	sol.tmin = limeted_sph(*sphere, ray, sol);
 	return (sol.tmin);
 }
 
@@ -57,6 +59,7 @@ t_vect	normsphr(t_ray *ray, t_obj *obj, double t)
 	t_vect	norm;
 
 	ray->hit = plus(ray->org, multi(ray->dir, t));
+	obj->hit = ray->hit;
 	norm = moins(ray->hit, obj->center);
 	return (normalize(norm));
 }
